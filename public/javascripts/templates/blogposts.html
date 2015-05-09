@@ -1,0 +1,37 @@
+<button class="btn btn-sm btn-warning" ui-sref="home"> Create a new blog </button>
+
+<h1 class = "text-center"> {{currentAuthor}} </h1>
+
+     <div ng-repeat = "post in posts" >
+           <div class="container">
+                 <div class="row hotdog text-center col-sm-offset-4">
+                    <div>
+                    <img ng-src="data:{{post.image.contentType}};base64, {{post.image.data}}"></img>
+                    <h2><em> {{post.title}} </em></h2>
+
+                    <p> {{post.body}} </p>
+
+                    </br>
+                    </div>
+                     <div><button class ="btn btn-xs pull-right deleteButton" value= "X" ng-click="deletePost(post._id)"><span>X</span></button></div>
+                 </div>
+           </div>
+     </div>
+
+<div id="post-form" class="row">
+    <div class="col-xs-3 col-sm-offset-4 text-center">
+        <form>
+            <div class = "form-group">
+                <div class ="postForm">
+                    <input type ="text" name="title" ng-model="formData.title" class="form-control" placeholder="Insert Blog Title.." maxlength = "30">
+                    <textarea ng-model="formData.body" class="form-control" placeholder="What's on your mind, bud?" maxlength="160"></textarea>
+                    <div class="btn btn-default" ngf-select ngf-change="upload($files)" ng-model="files">Upload Image</div>
+                    <div><button type="submit" class = "btn btn-primary btn-lg blogSubmit"  ng-click="createPost()">Submit Post</button></div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+

@@ -1,0 +1,40 @@
+.hotdog {
+  width: 30%;
+  background-color: #00FF80;
+  margin:1%;
+  position:relative;
+  left: 15px;
+  word-wrap: break-word;
+}
+
+.hotdog img {
+  max-width: 100%;
+
+}
+
+.blogSubmit {
+  position:relative;
+  margin:10%;
+  /*left:20px;*/
+}
+
+.postForm {
+  position: relative;
+  left: 50px;
+}
+
+.deleteButton{
+  position:relative;
+  bottom:50%;
+  opacity:0;
+
+  transition: opacity .5s;
+  -o-transition: opacity .5s;
+  -ms-transition: opacity .5s;
+  -moz-transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+}
+
+.deleteButton:hover{
+  opacity:1;
+}
